@@ -1,0 +1,165 @@
+.poll {
+  margin-top: 100px;
+
+  &__container {
+    @include u-container;
+    display: flex;
+  }
+
+  &__left {
+    width: 55.4%;
+
+    h2 {
+      @include h2-title;
+      color: #363738;
+    }
+
+    &>p {
+      margin-top: 32px;
+      font-family: 'PT Sans';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #6B6B6C;
+    }
+  }
+
+  &__radio-box {
+    margin-top: 40px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked ~ .poll__ellipse::after{
+        background: #0B7572;
+      }
+    }
+
+    li {
+      display: flex;
+      background: #FFFFFF;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+      padding: 40px 40px 48px 40px;
+      position: relative;
+      overflow: hidden;
+      column-gap: 32px;
+    }
+  }
+
+  &__lable {
+    display: flex;
+    column-gap: 32px;
+    cursor: pointer;
+  }
+
+  &__ellipse {
+    display: flex;
+    min-width: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #CBCBCD;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    position: relative;
+    margin-top: 8px;
+
+    &::after {
+      content: '';
+      display: flex;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      border-radius: 50%;
+    }
+  }
+
+  &__lable-title {
+    h4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      color: #363738;
+    }
+
+    p {
+      margin-top: 24px;
+      font-family: 'PT Sans';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #6B6B6C;
+    }
+  }
+
+  &__bg-shape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-flex;
+    border-bottom: 61.5px solid #E9E9EC;
+    border-left: 193px solid transparent;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    margin-top: 162px;
+    width: 44.6%;
+    height: 100%;
+
+    h5 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      color: #363738;
+    }
+  }
+
+  &__right-numb {
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 150%;
+    color: #363738;
+  }
+
+  &__right-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #6B6B6C;
+  }
+
+  &__right-box {
+    padding: 39px 0px;
+    border-bottom: 1.5px solid #FFCE50;
+  }
+}
+// input[type=radio]:checked ~ .poll__ellipse{
+//   border: 5px solid yellow;
+//   width: 50px;
+// }
+
+  /*
+!----------------adaptive------------------!
+*/
+
+@media (max-width: 768px) {
+  .poll__right {
+    display: none;
+  }
+
+  .poll__left {
+    width: 100%;
+  }
+}

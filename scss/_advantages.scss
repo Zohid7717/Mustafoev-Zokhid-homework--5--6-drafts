@@ -1,0 +1,56 @@
+.advantages {
+  margin-top: 100px;
+  &__bg {}
+
+  &__list {}
+
+  &__list-img {}
+
+  &__list-text {}
+}
+
+
+.bg-image {
+  border: 1px solid;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  height: 450px;
+
+  &__laft {
+    width: 41.32%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__laft-position{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__laft-image {
+    position: absolute;
+    background: #0B7572;
+    width: 200.5%;
+    height: 100.05%;
+    transform: skew(38deg);
+    left: -100%;
+  }
+
+  &__center {
+    
+  }
+
+  &__right {
+    width: 80.55%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
