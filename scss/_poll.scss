@@ -57,6 +57,12 @@
     display: flex;
     column-gap: 32px;
     cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+    }
+    &:active{
+      opacity: 0.5;
+    }
   }
 
   &__ellipse {
@@ -145,12 +151,8 @@
     border-bottom: 1.5px solid #FFCE50;
   }
 }
-// input[type=radio]:checked ~ .poll__ellipse{
-//   border: 5px solid yellow;
-//   width: 50px;
-// }
 
-  /*
+/*
 !----------------adaptive------------------!
 */
 
@@ -161,5 +163,12 @@
 
   .poll__left {
     width: 100%;
+  }
+}
+@media (max-width: 522px){
+  .poll__radio-box{
+    li{
+      padding: 16px;
+    }
   }
 }

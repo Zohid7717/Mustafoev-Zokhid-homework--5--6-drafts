@@ -16,7 +16,15 @@
 
       li {
         padding: 0 5.24%;
-
+        a{
+          transition: 0.3s;
+        }
+        a:hover{
+          opacity: 0.8;
+        }
+        a:active{
+          opacity: 0.5;
+        }
         &:not(:first-child) {
           border-left: 1px solid #D7D7DD;
         }

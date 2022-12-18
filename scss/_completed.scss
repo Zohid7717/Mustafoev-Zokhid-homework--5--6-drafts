@@ -1,0 +1,128 @@
+.completed {
+  @include u-container;
+  margin-top: 120px;
+
+  h2 {
+    @include h2-title;
+  }
+
+  &>p {
+    margin-top: 32px;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;
+  }
+
+  &__list {
+    margin-top: 56px;
+
+    ul {
+      display: flex;
+      column-gap: 30px;
+      justify-content: space-between;
+
+    }
+
+    li {
+      overflow: hidden;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+      border-radius: 10px;
+    }
+  }
+
+  &__list-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
+  &__list-text {
+    padding: 24px 32px 32px;
+
+    h4 {
+      margin-top: 24px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 135%;
+      color: #363738;
+    }
+  }
+
+  &__list-subtitle {
+    margin-top: 16px;
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #6B6B6C;
+  }
+
+  &__list-price {
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 135%;
+    color: #363738;
+
+    &::after {
+      content: '';
+      display: flex;
+      width: 92px;
+      height: 1.5px;
+      margin-top: 10px;
+      background: #FFCE50;
+
+    }
+  }
+
+  &__dots {
+    justify-content: center;
+    margin-top: 57px;
+    display: flex;
+    column-gap: 17px;
+
+    span {
+      display: flex;
+      width: 18px;
+      height: 18px;
+      background: #E9E9EC;
+      border-radius: 50%;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 36px;
+        height: 36px;
+        border: 1px solid #0B7572;
+        border-radius: 50%;
+        position: absolute;
+        top: -50%;
+        left: -50%;
+      }
+    }
+  }
+}
+
+/*
+!----------------adaptive-------------!
+*/
+@media (max-width: 867px) {
+  .completed__list {
+    ul {
+      flex-direction: column;
+    }
+
+    li {}
+  }
+  .completed__list-img{
+    height: 247px;
+  }
+}
