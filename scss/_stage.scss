@@ -1,0 +1,144 @@
+.stages {
+  @include u-container;
+  margin-top: 120px;
+
+  h2 {
+    @include h2-title;
+  }
+
+  &__list {
+    margin-top: 48px;
+    display: flex;
+    justify-content: end;
+
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      max-width: 1183px;
+    }
+
+    li {
+      display: flex;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+      padding: 32px 11.15% 32px 96px;
+      column-gap: 56px;
+      border-radius: 18px;
+      position: relative;
+      margin-left: 40px;
+    }
+  }
+
+  &__number {
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 0;
+  }
+
+  &__number-box {
+    position: relative;
+  }
+
+  &__list-img {
+    width: 331px;
+    height: 181px;
+
+    img {
+      width: 331px;
+      height: 181px;
+      object-fit: cover;
+    }
+  }
+
+  &__list-text {
+    h4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 125%;
+      color: #363738;
+
+      &::after {
+        content: '';
+        width: 86px;
+        height: 3px;
+        display: flex;
+        background: #FFCE50;
+        margin-top: 24px;
+      }
+    }
+
+    p {
+      margin-top: 24px;
+      font-family: 'PT Sans';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #6B6B6C;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  width: 68px;
+  height: 68px;
+  background: #0B7572;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 125%;
+  align-items: center;
+  color: #FFFFFF;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 19px;
+  transform: translate(0%, -50%);
+}
+
+.shape {
+  display: flex;
+  width: 38px;
+  height: 104px;
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+
+  &::after {
+    content: '';
+    display: flex;
+    width: 108px;
+    height: 108px;
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0px 4px 15px 10px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (max-width: 1100px) {
+  .stages__list {
+    li {
+      padding: 32px 70px 32px 79px;
+    }
+  }
+
+  .stages__list-img {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .stages__list {
+    li {
+      padding: 24px 22px 32px 50px;
+    }
+  }
+}
